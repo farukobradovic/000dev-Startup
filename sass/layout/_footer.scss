@@ -1,0 +1,140 @@
+.footer{
+    padding: 3rem 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .paragraph-footer-main{
+            margin-top: 2.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: var(--color-typography-dark);
+
+                &:hover{
+                    color: var(--color-primary-dark);
+                    transition: all .2s ease-out;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .sections{
+            display: flex;
+            align-items: center;
+            padding-bottom: 5rem;
+            border-bottom: 1px solid #ddd;
+            @include respond(iPhonePlus){
+                flex-direction: column; 
+             } 
+            @include respond(iPhone){
+               flex-direction: column; 
+            } 
+            .column{
+                flex: 25%;
+                &:not(:last-child){
+                    border-right: 1px solid #ddd;
+                }
+                @include respond(iPhonePlus){
+                    &:not(:last-child){
+                        border-bottom: 1px solid #ddd;
+                        border-right: none;
+                    }
+                } 
+                @include respond(iPhone){
+                    &:not(:last-child){
+                        border-bottom: 1px solid #ddd;
+                        border-right: none;
+                    }
+                } 
+                padding: 1.5rem 2.2rem;
+                .heading-section{
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+
+                &-list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    @include respond(iPad){
+                        flex-direction: column;
+                        
+                     } 
+                    &-item{
+                        flex: 0 0 25%;
+                        list-style: none;
+                        margin-right: 1rem;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        &-link{
+                            text-decoration: none;
+                            color: var(--color-typography-dark);
+
+                            &:hover{
+                                color: var(--color-primary-dark);
+                                transition: all .2s ease-out;
+                            }
+                        }
+                    }
+                }
+
+                .column-paragraphs{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .paragraph-footer{
+                        font-size: 1.5rem;
+                        text-align: left;
+                        letter-spacing: .05rem;
+                        font-weight: 600;
+                        .span-hours{
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .column-contact{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .paragraph-phone{
+                        font-size: 1.5rem;
+                        color: var(--color-typography-dark);
+                        font-weight: 600;
+                        letter-spacing: .05rem;
+                    }
+                    &-link{
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        color: var(--color-typography-dark);
+                        font-weight: 600;
+                        letter-spacing: .05rem;
+                        &:hover{
+                            color: var(--color-primary-dark);
+                            transition: all .2s ease-out;
+                        }
+                    }
+                }
+                .column-address{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .paragraph-footer{
+                        font-size: 1.5rem;
+                        letter-spacing: .05rem;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}

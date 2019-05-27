@@ -1,0 +1,168 @@
+.pricing-box{
+    position: relative;
+    @include respond(iPhonePlus){ 
+        &:not(:first-child){
+            display: none;
+        }
+    } 
+    @include respond(iPhone){ 
+        &:not(:first-child){
+            display: none;
+        }
+    } 
+    .button-left{
+        position: absolute;
+        top:50%;
+        left:5%;
+        width: 5rem;
+        height: 5rem;
+        // background: var(--color-primary-dark);
+        display: none;
+        // border-radius: 50%;
+        i{
+            position: absolute;
+            font-size: 3rem;
+            color: var(--color-primary-dark);
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+            &:hover{
+                color: var(--color-typography-dark);
+                transition: all .2s ease-out;
+            }
+        }
+        @include respond(iPhonePlus){
+            display: block;
+        }
+        @include respond(iPhone){
+            display: block;
+        }
+    }  
+    .button-right{
+        position: absolute;
+        top:50%;
+        right:5%;
+        width: 5rem;
+        height: 5rem;
+        // background: var(--color-primary-dark);
+        display: none;
+        // border-radius: 50%;
+        i{
+            position: absolute;
+            font-size: 3rem;
+            color: var(--color-primary-dark);
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+            &:hover{
+                color: var(--color-typography-dark);
+                transition: all .2s ease-out;
+            }
+        }
+        @include respond(iPhonePlus){
+            display: block;
+        }
+        @include respond(iPhone){
+            display: block;
+        }
+    }
+    padding: 5rem 8rem;
+    // margin: .3rem;
+    background: var(--color-typography-light);
+    border-radius: 3px;
+    box-shadow: 2px 0px 7px -1px rgba(0,0,0,0.75);
+    @include respond(iPad){
+        padding: 2rem 4rem;
+    }
+    @include respond(iPhonePlus){
+        margin-bottom: 1rem;
+        padding: 3rem 9rem;  
+    } 
+    @include respond(iPhone){
+        margin-bottom: 1rem;
+        padding: 3rem 7rem;  
+    } 
+    &:nth-child(2){
+        padding: 7rem 8rem;
+        z-index: 100;
+        @include respond(iPad){
+            padding: 3rem 4rem;
+        }  
+        @include respond(iPhonePlus){
+            margin-bottom: 1rem;
+            padding: 3rem 9rem;  
+        } 
+        @include respond(iPhone){
+            margin-bottom: 1rem;
+            padding: 3rem 7rem;  
+        }    
+    }
+    .heading-pricing{
+        font-size: 2.7rem;
+        text-align: center;
+    }
+
+    .pricing-box-icon{
+        font-size: 9rem;
+        text-align: center;
+        color: var(--color-primary-dark);
+    }
+
+    .paragraph-pricing{
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.9;
+    }
+    .color-span{
+        font-weight: 700;
+    }
+    .pricing-box-price{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        position: relative;
+        .paragraph-price{
+            font-size: 5rem;
+            font-weight: 500;
+            padding-top: 2.5rem;
+            letter-spacing: .12rem;
+
+            &::before{
+                content: '';
+                width: 5rem;
+                border-top: 1px solid #ddd;
+                position: absolute;
+                top: 20%;
+                left: 0;
+                width: 100%;
+                
+            }
+            &-month{
+                font-size: 1.2rem;
+                color:black;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: .1rem;
+                margin-top: -1.7rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+    }
+
+    &:hover{
+        cursor: default;
+    }
+
+    a:hover{
+        border: 3px solid var(--color-primary-dark);
+        background: transparent;
+        color: var(--color-primary-dark);
+        transition: all .2s ease-out;
+    }
+}

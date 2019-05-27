@@ -1,0 +1,51 @@
+.btn{
+    padding: 1.2rem 2.6rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    @include respond(iPad){
+        padding: .7rem 2rem;
+     } 
+
+    &-light{
+        color: var(--color-typography-light);
+        background: transparent;
+        border: 3px solid var(--color-typography-light);
+
+        &:hover{
+            transition: all .2s ease-out;
+            background: var(--color-primary-dark);
+            border: 3px solid var(--color-primary-dark);
+        }
+        @include respond(iPhone5){
+            padding: .4rem 1rem;
+            font-size: 1.6rem;
+         }
+    }
+    &-dark{
+        color: var(--color-typography-light);
+        background: var(--color-primary-dark);
+        border: 3px solid var(--color-primary-dark);
+
+        &:hover{
+            transition: all .2s ease-out;
+            background: transparent;
+            
+            border: 3px solid var(--color-typography-light);
+        }
+    }
+
+    &-superDark{
+        color: var(--color-typography-light);
+        background: var(--color-typography-dark);
+        border: 3px solid var(--color-typography-dark);
+
+        &:hover{
+            transition: all .2s ease-out;
+            background: transparent;
+            
+            border: 3px solid var(--color-typography-light);
+        }
+    }
+}
